@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -6,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CampaignCard from '@/components/CampaignCard';
-import { ChevronRight, Shield, Heart, Users } from 'lucide-react';
+import { ChevronRight, Shield, Heart, Users, PlusCircle } from 'lucide-react';
 
 const campaigns = [
   {
@@ -74,9 +73,14 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold text-navy">Featured Campaigns</h2>
-            <Link to="/campaigns" className="text-navy flex items-center hover:text-deepred transition-colors">
-              View All <ChevronRight size={16} className="ml-1" />
-            </Link>
+            <div className="flex gap-4">
+              <Link to="/campaigns" className="text-navy flex items-center hover:text-deepred transition-colors">
+                View All <ChevronRight size={16} className="ml-1" />
+              </Link>
+              <Link to="/campaigns/create" className="flex items-center text-deepred hover:text-red-700 transition-colors">
+                <PlusCircle size={16} className="mr-1" /> Create Campaign
+              </Link>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

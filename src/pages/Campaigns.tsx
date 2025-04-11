@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CampaignCard from '@/components/CampaignCard';
 import { Input } from '@/components/ui/input';
-import { Search, Filter } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Search, Filter, PlusCircle } from 'lucide-react';
 
 const allCampaigns = [
   {
@@ -92,8 +94,8 @@ const Campaigns = () => {
       
       <section className="py-12">
         <div className="container mx-auto px-6">
-          <div className="mb-8">
-            <div className="relative mb-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+            <div className="relative w-full md:w-auto md:flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <Input
                 type="text"
@@ -104,21 +106,27 @@ const Campaigns = () => {
               />
             </div>
             
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${
-                    activeCategory === category 
-                      ? 'bg-navy text-white' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                  onClick={() => setActiveCategory(category)}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+            <Link to="/campaigns/create">
+              <Button className="bg-deepred hover:bg-red-700 text-white w-full md:w-auto">
+                <PlusCircle className="mr-2 h-4 w-4" /> Create Campaign
+              </Button>
+            </Link>
+          </div>
+            
+          <div className="flex flex-wrap gap-2 mb-8">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`px-4 py-2 rounded-full text-sm font-medium ${
+                  activeCategory === category 
+                    ? 'bg-navy text-white' 
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
           </div>
           
           {filteredCampaigns.length > 0 ? (
