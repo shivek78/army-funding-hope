@@ -57,14 +57,4 @@ npm install
 ------------------------------------------------------------------------------------------------------
 📸 Screenshots
 screenshots folder and embed below:
-
-home Screenshot
-
-
-Landing Page
-
-Login Page
-
-Donation Page	
-
-Dashboard (Coming soon
+in final outpou folder
