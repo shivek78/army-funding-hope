@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Award, Target, Heart } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const About = () => {
   return (
@@ -99,10 +100,10 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: 'Shivek', role: 'Founder & Executive Director', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80' },
-              { name: 'Raju', role: 'Director of Operations', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80' },
-              { name: 'Bablu', role: 'Outreach Coordinator', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80' },
-              { name: 'Aarif', role: 'Finance Manager', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80' },
+              { name: 'Shivek', role: 'Founder & Executive Director', image: '/lovable-uploads/1efa6cfc-0fba-4c88-82de-ebda201f897e.png' },
+              { name: 'Raju', role: 'Director of Operations', image: '/lovable-uploads/15b7891d-c4da-4eca-923b-a56c2fe058bb.png' },
+              { name: 'Bablu', role: 'Outreach Coordinator', image: '/lovable-uploads/1d1cef51-5ec8-458f-8105-b523985bf190.png' },
+              { name: 'Aarif', role: 'Finance Manager', image: '/lovable-uploads/79847882-6435-4776-9deb-a6d6241fbb40.png' },
             ].map((member, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="h-64 overflow-hidden">
