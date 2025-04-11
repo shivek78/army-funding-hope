@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,7 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
-import { CreditCard, DollarSign, Heart, CheckCircle, ChevronRight } from 'lucide-react';
+import { CreditCard, DollarSign, Heart, CheckCircle, ChevronRight, Users as UsersIcon } from 'lucide-react';
 
 const Donate = () => {
   const [donationAmount, setDonationAmount] = useState('50');
@@ -250,7 +249,7 @@ const Donate = () => {
                       <Heart className="mr-2" size={18} /> Start a Fundraiser <ChevronRight size={16} className="ml-1" />
                     </a>
                     <a href="#" className="flex items-center text-navy hover:text-deepred">
-                      <Users className="mr-2" size={18} /> Volunteer <ChevronRight size={16} className="ml-1" />
+                      <UsersIcon className="mr-2" size={18} /> Volunteer <ChevronRight size={16} className="ml-1" />
                     </a>
                   </div>
                 </CardContent>
